@@ -28,6 +28,9 @@ function endTest() {
   var typedWords = userTypedText.split(/\s+/).filter(function (word) {
     return word !== "";
   }).length;
+  
+  //count text length
+  var textLength = userTypedText.length;
 
   var wpm = 0; // Default value
 
@@ -39,6 +42,9 @@ function endTest() {
   var outputDiv = document.getElementById("output");
   outputDiv.innerHTML =
     "<h2>Typing Test Results:</h2>" +
+    "<p>Total Lenghth: " +
+    textLength +
+    "</p>" +
     "<p>Words Typed: " +
     typedWords +
     "</p>" +
